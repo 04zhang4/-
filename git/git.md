@@ -26,3 +26,5 @@ $ git config --global user.email test@runoob.com
 - 远程仓库的设置参考教程
 - 目前使用的是https连接，ssl可能出现了一些问题
 - 由于访问github通常使用了梯子，所以需要使用`git config --global http.proxy http:127.0.0.1:xxxx`等修改配置![alt text](image-6.png)
+- 将仓库里的文件提交到链接的远程仓库 `git push -u origin main`
+- 使用`git fetch` 或者`git merge` 从远程仓库提取最新更新
