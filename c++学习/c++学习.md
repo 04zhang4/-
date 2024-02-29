@@ -116,3 +116,68 @@ s.append(str);//末尾添加str，比加法更好
 ![alt text](image-3.png)
 ![alt text](image-4.png)
 ![alt text](image-5.png)
+
+## 常用函数
+### atoi，stoi和stoll
+将字符串转int;atoi不做范围检查，超出上下界输出上下界;stoi将string转成int,且会作范围检查;stoll转成longlong
+```c++
+string s="1234";
+int c=atoi(s.c_str());
+int cc=stoi(s);//stoi是将string转成int
+```
+### fill
+对一个序列进行初始化赋值;`memset()`是按字节赋值，常用来赋0或1
+```c++
+int a[10];
+fill(a,a+10,1);//左闭右开
+```
+
+### is_sorted
+判断是否有升序,放回bool值
+```c++
+if(is_sorted(a,a+6))cout <<"yes";//左闭右开
+```
+
+### 二分查找
+```c++
+lower_bound(a,a+n,x);//查找第一个小于等于x的元素
+upper_bound(a,a+n,x);//查找第一个大于等于x的元素，返回地址
+```
+### 最大小值
+```c++
+max_element(a,a+n);
+min_element(a,a+n);//返回的是地址
+max(a,b);
+min(a,b);
+max({a,b,c,d});//略
+```
+
+### reverse
+将序列逆转
+`reverse(s.begin(),s.end())`
+
+### sort和stable_sort
+O(nlogn)的排序,后者不会改变相等元素的相对位置
+```c++
+sort(a,a+n);//升序
+sort(a,a+n,greater<int>());//降序
+
+
+// 1. 使用函数自定义排序，定义比较函数
+bool cmp(node a, node b) {
+    //按结构体里面的x值降序排列
+    return a.x > b.x;
+}
+sort(node, node + n, cmp); // 只能接受 以函数为形式的自定义排序规则，无法接受以结构体为形式的自定义排序规则
+
+// 2. 或者使用匿名函数自定义排序规则
+sort(node, node + n, [](node a, node b) {
+    return a.x > b.x;
+});
+
+```
+
+### unique
+消除重复元素  
+`unique(begin,end)`
+
