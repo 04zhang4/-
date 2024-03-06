@@ -1,4 +1,22 @@
 # C++ 常用STL使用
+- [C++ 常用STL使用](#c-常用stl使用)
+	- [vector](#vector)
+	- [stack栈](#stack栈)
+	- [queue队列](#queue队列)
+	- [map和set（建议看书）](#map和set建议看书)
+	- [string字符串类](#string字符串类)
+	- [常用函数](#常用函数)
+		- [atoi，stoi和stoll](#atoistoi和stoll)
+		- [fill](#fill)
+		- [is\_sorted](#is_sorted)
+		- [二分查找](#二分查找)
+		- [最大小值](#最大小值)
+		- [reverse](#reverse)
+		- [sort和stable\_sort](#sort和stable_sort)
+		- [unique](#unique)
+
+
+
 ## vector
 - `vector`是变长数组，动态数组，在头文件`<vector>`
 - `vector`在局部空间(比如局部函数)中，是在堆空间中
