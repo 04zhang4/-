@@ -14,6 +14,8 @@
 		- [reverse](#reverse)
 		- [sort和stable\_sort](#sort和stable_sort)
 		- [unique](#unique)
+		- [isalpha](#isalpha)
+		- [tolower() toupper()](#tolower-toupper)
 
 
 
@@ -199,3 +201,8 @@ sort(node, node + n, [](node a, node b) {
 消除重复元素  
 `unique(begin,end)`
 
+### isalpha
+	int isalpha(int c);
+	//c是要检查的字符，是字母（包括大小写）返回非零值，不是，则返回0
+
+### tolower() toupper()
